@@ -1,0 +1,22 @@
+{
+  "name": "wordice",
+  "version": "1.0.0",
+  "description": "Simply grab some random words from an array!",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:hachi-studio/wordice.git"
+  },
+  "keywords": [
+    "random",
+    "words",
+    "words",
+    "word",
+    "generator",
+    "sample",
+    "text",
+    "array",
+  ],
+  "author": "Hachi Studio",
+  "license": "MIT",
+}
