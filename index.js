@@ -1,120 +1,41 @@
-function wordice(options, wordList) {
-
-  function word() {
-    if (options && options.minLength > 1 && options.maxLength > 1) {
-      return generateWordWithMaxOrMinLength();
-    } else if (options && options.maxLength > 1 ) {
-      return generateWordWithMaxLength();
-    } else if (options && options.minLength > 1 ) {
-      return generateWordWithMinLength();
-    } else {
-      return generateRandomWord();
-    }
+const wordice = (words, options) => {
+  // Check if we have any options
+  if(options === undefined) {
+    return words[Math.floor(Math.random()*words.length)];
+  }
+  // Options exist? Lets char minimum character length...
+  if(options.minCharacters && options.minCharacters > 1) {
+    words = words.filter( function( element ) {
+      return element.length >= options.minCharacters;
+    });
   }
 
-  function generateWordWithMaxOrMinLength() {
-    var rightSize = false;
-    var wordUsed;
-    while (!rightSize) {
-      wordUsed = generateRandomWord();
-      if(wordUsed.length <= options.maxLength && wordUsed.length >= options.minLength) {
-        rightSize = true;
-      }
+  // And maximum character length...
 
-    }
-    return wordUsed;
+  if(options.maxCharacters && options.maxCharacters > 1) {
+    words = words.filter( function( element ) {
+      return element.length <= options.maxCharacters;
+    });
   }
 
-  function generateWordWithMaxLength() {
-    var rightSize = false;
-    var wordUsed;
-    while (!rightSize) {
-      wordUsed = generateRandomWord();
-      if(wordUsed.length <= options.maxLength) {
-        rightSize = true;
-      }
+  // No word length set? Let's just return one item!
 
-    }
-    return wordUsed;
+  if(options.wordCount === undefined) {
+    return words[Math.floor(Math.random()*words.length)];
   }
 
-  function generateWordWithMinLength() {
-    var rightSize = false;
-    var wordUsed;
-    while (!rightSize) {
-      wordUsed = generateRandomWord();
-      if(wordUsed.length >= options.minLength) {
-        rightSize = true;
-      }
+  // Ok it seems like we have a specific ammount of words want...
+  // Lets create a seperate array and push them there!
 
-    }
-    return wordUsed;
+  const multipleWords = [];
+
+  for (var i = 0; (i < options.wordCount); i++) {
+    multipleWords.push(
+      words[Math.floor(Math.random()*words.length)]
+    );
   }
 
-  function generateRandomWord() {
-    return wordList[randInt(wordList.length)];
-  }
-
-  function randInt(lessThan) {
-    return Math.floor(Math.random() * lessThan);
-  }
-
-  // No arguments = generate one word
-  if (typeof(options) === 'undefined') {
-    return word();
-  }
-
-  // Just a number = return that many words
-  if (typeof(options) === 'number') {
-    options = { exactly: options };
-  }
-
-  // options supported: exactly, min, max, join
-  if (options.exactly) {
-    options.min = options.exactly;
-    options.max = options.exactly;
-  }
-
-  // not a number = one word par string
-  if (typeof(options.wordsPerString) !== 'number') {
-    options.wordsPerString = 1;
-  }
-
-  //not a function = returns the raw word
-  if (typeof(options.formatter) !== 'function') {
-    options.formatter = (word) => word;
-  }
-
-  //not a string = separator is a space
-  if (typeof(options.separator) !== 'string') {
-    options.separator = ' ';
-  }
-
-  var total = options.min + randInt(options.max + 1 - options.min);
-  var results = [];
-  var token = '';
-  var relativeIndex = 0;
-
-  for (var i = 0; (i < total * options.wordsPerString); i++) {
-    if (relativeIndex === options.wordsPerString - 1) {
-      token += options.formatter(word(), relativeIndex);
-    }
-    else {
-      token += options.formatter(word(), relativeIndex) + options.separator;
-    }
-    relativeIndex++;
-    if ((i + 1) % options.wordsPerString === 0) {
-      results.push(token);
-      token = '';
-      relativeIndex = 0;
-    }
-
-  }
-  if (typeof options.join === 'string') {
-    results = results.join(options.join);
-  }
-
-  return results;
+  return multipleWords.toString();
 }
 
 module.exports = wordice;
