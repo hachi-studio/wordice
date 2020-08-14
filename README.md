@@ -9,7 +9,7 @@ Installation:
 
 Usage:
 
-        wordice([]);
+        wordice(['Bird', 'Is', 'The', 'Word']);
 
 
 Example:
