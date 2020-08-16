@@ -33,4 +33,17 @@ Example:
     console.log(myRandomWords);
     // Word, Some, This
 
+
+You can change the joining character between items
+
+
+Example:
+
+    import wordice from "wordice";
+
+    const coolArray = ['This', 'Is', 'An', 'Array', 'Of', 'Some', 'More', 'Words'];
+    const myRandomWords = wordice(coolArray, { join: '-' wordCount: 3 });
+    console.log(myRandomWords);
+    // Word-Some-This
+
 Currently WIP, so don't use this for anything serious.
