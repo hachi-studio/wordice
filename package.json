@@ -7,6 +7,10 @@
     "type": "git",
     "url": "git@github.com:hachi-studio/wordice.git"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hachi-studio/wordice.git"
+  },
   "keywords": [
     "random",
     "words",

@@ -3,6 +3,8 @@
 
 Got an array if items and need something randomly selected? Wordice generates a random word (or even words) from an array!
 
+Playground: [here](https://codesandbox.io/s/long-snowflake-0py2e?file=/src/App.js)
+
 Installation:
 
     yarn add wordice
