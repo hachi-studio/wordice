@@ -10,13 +10,16 @@ Installation:
     yarn add wordice
 
 Usage:
+
         wordice(); // Uses a default list of words
         wordice(['Bird', 'Is', 'The', 'Word']); // Your own array
         wordice(['Bird', 'Is', 'The', 'Word'], options); // Your own array + options!
 
 
 Example:
+
     import wordice from "wordice";
+
     const myRandomWord = wordice();
     console.log(myRandomWord);
     // Duck
@@ -24,7 +27,9 @@ Example:
 With your own array
 
 Example:
+
     import wordice from "wordice";
+
     const coolArray = ['This', 'Is', 'An', 'Array', 'Of', 'Words'];
     const myRandomWord = wordice(coolArray);
     console.log(myRandomWord);
@@ -37,7 +42,9 @@ Note: *If you set wordCount to a greater number of items in the array it will be
 
 
 Example:
+
     import wordice from "wordice";
+
     const coolArray = ['This', 'Is', 'An', 'Array', 'Of', 'Some', 'More', 'Words'];
     const myRandomWords = wordice(coolArray, { minCharacters: 3, maxCharacters: 4, wordCount: 3 });
     console.log(myRandomWords);
@@ -48,7 +55,9 @@ length of the array.
 
 
 Example:
+
     import wordice from "wordice";
+
     const coolArray = ['A', 'B', 'C'];
     const myRandomWords = wordice(coolArray, { allowDuplicates: true,　wordCount: ５ });
     console.log(myRandomWords);
@@ -59,7 +68,9 @@ You can change the joining character between items
 
 
 Example:
+
     import wordice from "wordice";
+
     const coolArray = ['This', 'Is', 'An', 'Array', 'Of', 'Some', 'More', 'Words'];
     const myRandomWords = wordice(coolArray, { join: '-' wordCount: 3 });
     console.log(myRandomWords);
