@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.1.1
+
+* Fixed readme formatting, updated package.json.
+
 ## 2.1.0
 
 * Allow for no params added and use a default list of words, `allowDuplicates` option added, docs updates.

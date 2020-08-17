@@ -1,7 +1,7 @@
 {
   "name": "wordice",
-  "version": "2.1.0",
-  "description": "Simply grab some random words from an array!",
+  "version": "2.1.1",
+  "description": "Simply generate a random word, or grab a words from an array!",
   "main": "index.js",
   "repository": {
     "type": "git",
