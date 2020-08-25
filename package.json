@@ -1,6 +1,6 @@
 {
   "name": "wordice",
-  "version": "2.1.1",
+  "version": "2.1.2",
   "description": "Simply generate a random word, or grab a words from an array!",
   "main": "index.js",
   "repository": {
