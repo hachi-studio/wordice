@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.1.2
+
+* Defined default export (bug fix)
+
 ## 2.1.1
 
 * Fixed readme formatting, updated package.json.

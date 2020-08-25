@@ -1,6 +1,6 @@
 import defaultWords from './defaultWords';
 // No options OR array? Use a default bunch of words and pick one.
-const wordice = (words, options) => {
+export default function wordice(words, options) {
   if(words === undefined && options === undefined) {
     return defaultWords[Math.floor(Math.random()*defaultWords.length)];
   }
@@ -67,5 +67,3 @@ const wordice = (words, options) => {
 
   return multipleWords.toString();
 }
-
-module.exports = wordice;
