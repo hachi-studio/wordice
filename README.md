@@ -75,7 +75,7 @@ console.log(myRandomWords);
 
 ## In the wild
 
-[Passnip password generator](https://passnip.com)
+**[Passnip password generator](https://passnip.com)**
 
 ## Feedback:
 Feel free to send us file an issue or add feedback [here](https://github.com/hachi-studio/wordice/issues/new). Feature requests are always welcome.
