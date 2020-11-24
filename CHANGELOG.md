@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.1.3
+
+* Documentation tweaks, demo updated.
+
 ## 2.1.2
 
 * Defined default export (bug fix)
