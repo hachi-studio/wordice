@@ -5,7 +5,7 @@ Got an array of words and need something randomly selected? Wordice picks a rand
 
 Don't have an array, and just need a random word? We got you.
 
-**Demo: [here](https://codesandbox.io/s/wordice-example-4tgox)**
+**Demo: [here](https://codesandbox.io/s/wordice-9mmjm?file=/src/App.js)**
 
 ## Installation:
 ```jsx
