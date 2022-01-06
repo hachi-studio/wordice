@@ -1,5 +1,5 @@
 # Wordice 🎲
-#### Generate random words, or pick some from an array from an array!
+#### Generate random words, or pick some from an array!
 
 Got an array of words and need something randomly selected? Wordice picks a random word (or words) from an array with ease!
 
